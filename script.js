@@ -8,7 +8,7 @@ const line2 = document.querySelector(".line2");
 const line3 = document.querySelector(".line3");
 
 
-hamburger.addEventListener('click',()=>{
+hamburger.addEventListener('click', () => {
     span1.classList.toggle("line1");
     span2.classList.toggle("line2");
     span3.classList.toggle("line3");
@@ -25,7 +25,9 @@ function sendMessage() {
     const encodedMessage = encodeURIComponent(message);
 
     // WhatsApp URL with pre-filled message
-    const whatsappURL = `https://wa.me/?text=${encodedMessage}`;
+    // Your target phone number
+    const phoneNumber = "7856838553"; 
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
     // Redirecting to WhatsApp
     window.location.href = whatsappURL;
