@@ -15,3 +15,18 @@ hamburger.addEventListener('click',()=>{
     navlink2.classList.toggle("navlinkblock")
 })
 
+
+function sendMessage() {
+    const name = prompt("Please enter your name:");
+    const contact = prompt("Please enter your contact number:");
+    const message = `Hello, my name is ${name} and my contact number is ${contact}.`;
+
+    // Encoding the message for URL
+    const encodedMessage = encodeURIComponent(message);
+
+    // WhatsApp URL with pre-filled message
+    const whatsappURL = `https://wa.me/?text=${encodedMessage}`;
+
+    // Redirecting to WhatsApp
+    window.location.href = whatsappURL;
+}
